@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d19">
+  <meta name="description" content="RizzFlirt helps you find natural, confident replies and conversation starters.">
+  <title>RizzFlirt — Find your words</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="RizzFlirt home"><span class="brand-mark">R</span> Rizz<span>Flirt</span></a>
+    <span class="demo-pill"><i></i> STARTER DEMO</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span>✦</span> YOUR PERSONAL CONVERSATION WINGMAN</div>
+      <h1>Less overthinking.<br><span>More connection.</span></h1>
+      <p class="intro">Find a reply that sounds like you. Confident, playful, and always natural.</p>
+    </section>
+
+    <section class="coach-card" aria-labelledby="coach-title">
+      <div class="card-head">
+        <div class="avatar">✦</div>
+        <div><h2 id="coach-title">Your Rizz Coach</h2><p>What are we replying to?</p></div>
+        <span class="online-dot" title="Demo mode"></span>
+      </div>
+
+      <label for="message">THE MESSAGE YOU RECEIVED</label>
+      <textarea id="message" rows="4" maxlength="1200" placeholder="Paste their message here… e.g. “You disappeared 👀”"></textarea>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="tone">YOUR VIBE</label>
+          <select id="tone">
+            <option value="smooth">Smooth & confident</option>
+            <option value="funny">Funny & playful</option>
+            <option value="romantic">Sweet & romantic</option>
+            <option value="bold">Bold but respectful</option>
+            <option value="casual">Chill & natural</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="goal">YOUR GOAL</label>
+          <select id="goal">
+            <option value="reply">Reply naturally</option>
+            <option value="start">Start a conversation</option>
+            <option value="flirt">Flirt a little</option>
+            <option value="date">Suggest a date</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generate" class="primary-btn"><span>✦</span> Get my replies <span class="arrow">→</span></button>
+      <p class="fine-print">Starter demo only · Sample suggestions, not connected to an AI service yet.</p>
+
+      <div id="results" class="results" hidden aria-live="polite">
+        <div class="results-heading"><div><span class="eyebrow">YOUR OPTIONS</span><h3>Pick your favourite</h3></div><span class="sparkle">✦</span></div>
+        <div id="reply-list" class="reply-list"></div>
+        <p class="demo-note">These are example replies generated in your browser. Connect a secure AI backend before offering real AI coaching.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="section-label">MADE FOR REAL CONVERSATIONS</div>
+      <div class="feature-grid">
+        <article><span class="feature-icon">✍</span><h3>Replies that sound like you</h3><p>Choose the tone that fits your personality.</p></article>
+        <article><span class="feature-icon">♡</span><h3>Confidence, not pressure</h3><p>Keep it genuine and respect their boundaries.</p></article>
+        <article><span class="feature-icon">✦</span><h3>More ways to connect</h3><p>Conversation starters, follow-ups, and date ideas.</p></article>
+      </div>
+    </section>
+
+    <section class="premium">
+      <div><div class="eyebrow">LEVEL UP YOUR GAME</div><h2>Meet RizzFlirt Premium</h2><p>More coaching. More context. Better ways to express yourself.</p></div>
+      <div class="price"><strong>₦2,500</strong><span>/ month</span><small>Planned price · payments not enabled</small></div>
+      <ul><li>More reply suggestions</li><li>Detailed conversation analysis</li><li>Follow-up ideas and date invitations</li></ul>
+      <button class="secondary-btn" id="premium-btn">Join the waitlist <span>→</span></button>
+      <p id="waitlist-message" class="waitlist-message" hidden>Thanks for your interest! Payments and sign-up are not active in this demo yet.</p>
+    </section>
+
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">R</span> Rizz<span>Flirt</span></a><p>Be confident. Be kind. Be yourself.</p><small>© <span id="year"></span> RizzFlirt · Starter prototype</small></footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
